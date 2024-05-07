@@ -4,9 +4,9 @@ import sqlite3
 app = Flask(__name__)
 
 # Create a basic SQLite database for storing tickets
-def init_db():
-    with sqlite3.connect('retail_management.db') as conn:
-        conn.execute('''CREATE TABLE IF NOT EXISTS items
+#def init_db():
+with sqlite3.connect('retail_management.db') as conn:
+    conn.execute('''CREATE TABLE IF NOT EXISTS items
                         (id INTEGER PRIMARY KEY AUTOINCREMENT, 
                          name TEXT, 
                          price REAL, 
@@ -64,6 +64,6 @@ def search_tickets():
 
 
 
-if __name__ == '__main__':
-    init_db()
-    app.run(port=5012) 
+#if __name__ == '__main__':
+    #init_db()
+    #app.run(port=5012) 
